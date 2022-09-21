@@ -145,11 +145,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Сухайб\\Desktop\\ExamApi\\Services\\Services.csproj",
+      "projectUniqueName": "C:\\Users\\Сухайб\\Desktop\\C#\\ExamApi\\Services\\Services.csproj",
       "projectName": "Services",
-      "projectPath": "C:\\Users\\Сухайб\\Desktop\\ExamApi\\Services\\Services.csproj",
+      "projectPath": "C:\\Users\\Сухайб\\Desktop\\C#\\ExamApi\\Services\\Services.csproj",
       "packagesPath": "C:\\Users\\Сухайб\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Сухайб\\Desktop\\ExamApi\\Services\\obj\\",
+      "outputPath": "C:\\Users\\Сухайб\\Desktop\\C#\\ExamApi\\Services\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Сухайб\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -164,8 +164,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Сухайб\\Desktop\\ExamApi\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\Сухайб\\Desktop\\ExamApi\\Domain\\Domain.csproj"
+            "C:\\Users\\Сухайб\\Desktop\\C#\\ExamApi\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\Сухайб\\Desktop\\C#\\ExamApi\\Domain\\Domain.csproj"
             }
           }
         }

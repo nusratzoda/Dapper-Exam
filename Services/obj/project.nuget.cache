@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FXUj2cY41AJzqS8YGXyvzAHKkaijZp/kH/uXnElDiFkvphqRbspu8nn3D2+yRRxqWmDBW1K/OgaZKDIK73//+A==",
+  "dgSpecHash": "Q7CUP2KEOFRhtihvF6JJF/Sta1cllSPrY27BYQFmqQ1XCRgzZ221qjC8vlVFupb2F97sLl/fEEYAbYQ500Lepw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Сухайб\\Desktop\\ExamApi\\Services\\Services.csproj",
+  "projectFilePath": "C:\\Users\\Сухайб\\Desktop\\C#\\ExamApi\\Services\\Services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Сухайб\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\Сухайб\\.nuget\\packages\\npgsql\\6.0.6\\npgsql.6.0.6.nupkg.sha512",

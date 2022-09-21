@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "L0p+4swlBYRC34E563i9SMyu0F1mmjYaXw+vTHfqR6kReWT7hEMalj7B98rLuqy8H3DWaIXQ2cnBBT02WeEw/A==",
+  "dgSpecHash": "SKSBsZWMJAHDgpFDOefEPH/7sj1zd0D5C7O4h27sE0kdavaomBDKg6AwL4WvmxUm3gFspEBXXlDsxKMbLkCshA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Сухайб\\Desktop\\ExamApi\\Domain\\Domain.csproj",
+  "projectFilePath": "C:\\Users\\Сухайб\\Desktop\\C#\\ExamApi\\Domain\\Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
