@@ -4,23 +4,24 @@ using Domain;
 namespace Services;
 public class QouteServices
 {
-    private string _connectionString;
-    public QouteServices()
+    private DataContext.DataContext _context;
+
+    public QouteServices(DataContext.DataContext context)
     {
-        _connectionString = "Server=127.0.0.1;Port=5432;Database=ExamApi;User Id=postgres;Password=882003421sb.;";
+        _context = context;
     }
     public async Task<Response<List<Quote>>> GetQuotes()
     {
-        using (NpgsqlConnection connection = new NpgsqlConnection(_connectionString))
-        {
-            var response = await connection.QueryAsync<Quote>($"select * from Quote;");
-            return new Response<List<Quote>>(response.ToList());
-        }
+        await using var connection = _context.CreateConnection();
+
+        var response = await connection.QueryAsync<Quote>($"select * from Quote;");
+        return new Response<List<Quote>>(response.ToList());
+
     }
     public async Task<Response<Quote>> ADDQuote(Quote quote)
     {
 
-        using (NpgsqlConnection connection = new NpgsqlConnection(_connectionString))
+        using var connection = _context.CreateConnection();
         {
             try
             {
@@ -40,7 +41,7 @@ public class QouteServices
     public async Task<Response<Quote>> DeleteQuote(int id)
     {
 
-        using (NpgsqlConnection connection = new NpgsqlConnection(_connectionString))
+        using var connection = _context.CreateConnection();
         {
             string sql = $"delete from Quote where Id = '{id}';";
             try
@@ -57,7 +58,7 @@ public class QouteServices
     public async Task<Response<Quote>> UpdateQuote(Quote quote)
     {
 
-        using (NpgsqlConnection connection = new NpgsqlConnection(_connectionString))
+        using var connection = _context.CreateConnection();
         {
             string sql = $"UPDATE Quote SET Author = '{quote.Author}', CategoryId = '{quote.CategoryId}' WHERE Id = {quote.Id};";
             try
@@ -73,7 +74,7 @@ public class QouteServices
     }
     public async Task<Response<Quote>> GetAllQuotesByCategory(int id)
     {
-        using (NpgsqlConnection connection = new NpgsqlConnection(_connectionString))
+        using var connection = _context.CreateConnection();
         {
             string sql = ($"select * from Quote where CategoryId ={id} ;");
             try
@@ -89,7 +90,7 @@ public class QouteServices
     }
     public async Task<Response<Quote>> GetRandom(int id)
     {
-        using (NpgsqlConnection connection = new NpgsqlConnection(_connectionString))
+        using var connection = _context.CreateConnection();
         {
             string sql = ($"select * from quote order by random() Limit 1 ;");
             try
@@ -105,7 +106,7 @@ public class QouteServices
     }
     public async Task<Response<List<QuoteWithCategoruDto>>> GetQuoteWithCategory(int categoryId)
     {
-        using (NpgsqlConnection connection = new NpgsqlConnection(_connectionString))
+        using var connection = _context.CreateConnection();
         {
             var response = await connection.QueryAsync<QuoteWithCategoruDto>($"select q.id,q.author,q.quotetext,c.categoryname from quote as q join categories as c on q.categoryid = c.id; ");
             return new Response<List<QuoteWithCategoruDto>>(response.ToList());
