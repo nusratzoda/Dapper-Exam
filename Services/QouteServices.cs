@@ -16,7 +16,6 @@ public class QouteServices
 
         var response = await connection.QueryAsync<Quote>($"select * from Quote;");
         return new Response<List<Quote>>(response.ToList());
-
     }
     public async Task<Response<Quote>> ADDQuote(Quote quote)
     {
